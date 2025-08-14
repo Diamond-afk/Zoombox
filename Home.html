@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Launcher Lobby</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        .game-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .game {
+            background-color: #34495e;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .game:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        .game a {
+            text-decoration: none;
+            color: #ecf0f1;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Game Launcher Lobby</h1>
+    <div class="game-list">
+        <div class="game">
+            <a href="buildnow.html" target="_blank">Game 1</a>
+        </div>
+        <div class="game">
+            <a href="Bloxd.html" target="_blank">Bloxd.io</a>
+        </div>
+        <div class="game">
+            <a href="SkyRiders.html" target="_blank">Sky Riders</a>
+        </div>
+        <div class="game">
+            <a href="Hazmob.html" target="_blank">Hazmob Fps</a>
+        </div>
+    </div>
+</body>
+</html>
