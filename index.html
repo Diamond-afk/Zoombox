@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Full Screen Google Drive Video</title>
   <style>
-    /* Make the video fill the entire viewport */
     html, body {
       margin: 0;
       padding: 0;
@@ -13,23 +11,28 @@
       overflow: hidden;
       background-color: black;
     }
-    iframe {
+    video {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 100%;
       height: 100%;
-      border: none;
+      object-fit: cover; /* Ensures video covers screen while maintaining aspect ratio */
     }
   </style>
 </head>
 <body>
-  <iframe 
-    src="https://drive.google.com/file/d/1VE1Y1f39nQQBtQA554KOFSxSBn-5EWjE/preview?autoplay=1" 
-    allow="autoplay"
-    allowfullscreen
-  ></iframe>
+  <video id="myVideo" autoplay>
+    <source src="/Videos/intro.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <script>
+    const video = document.getElementById('myVideo');
+    video.addEventListener('ended', () => {
+      window.location.href = "excalibor.ch"; // Redirect after video ends
+    });
+  </script>
 </body>
 </html>
-
-
